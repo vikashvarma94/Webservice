@@ -1,32 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30485" started-at="2021-01-21T13:18:09Z" finished-at="2021-01-21T13:18:40Z">
+  <suite name="Default suite" duration-ms="3913" started-at="2021-01-21T16:38:30Z" finished-at="2021-01-21T16:38:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30485" started-at="2021-01-21T13:18:09Z" finished-at="2021-01-21T13:18:40Z">
-      <class name="Gw.Webservice.REST_TC.Get">
-        <test-method status="PASS" signature="suite()[pri:0, instance:Gw.Webservice.REST_TC.Get@5c5a1b69]" name="suite" is-config="true" duration-ms="104" started-at="2021-01-21T18:48:09Z" finished-at="2021-01-21T18:48:09Z">
+    <test name="Default test" duration-ms="3913" started-at="2021-01-21T16:38:30Z" finished-at="2021-01-21T16:38:34Z">
+      <class name="Gw.Webservice.REST_TC.tc1_Get">
+        <test-method status="PASS" signature="suite()[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="suite" is-config="true" duration-ms="114" started-at="2021-01-21T22:08:30Z" finished-at="2021-01-21T22:08:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suite -->
-        <test-method status="PASS" signature="f()[pri:0, instance:Gw.Webservice.REST_TC.Get@5c5a1b69]" name="f" duration-ms="8262" started-at="2021-01-21T18:48:09Z" finished-at="2021-01-21T18:48:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="endtest(org.testng.ITestResult)[pri:0, instance:Gw.Webservice.REST_TC.Get@5c5a1b69]" name="endtest" is-config="true" duration-ms="22105" started-at="2021-01-21T18:48:18Z" finished-at="2021-01-21T18:48:40Z">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="test" duration-ms="2247" started-at="2021-01-21T22:08:30Z" data-provider="inputs" finished-at="2021-01-21T22:08:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=f status=SUCCESS method=Get.f()[pri:0, instance:Gw.Webservice.REST_TC.Get@5c5a1b69] output={null}]]]>
+                <![CDATA[https://reqres.in/api]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/users]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[HTTP/1.1 200 OK]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endtest -->
-      </class> <!-- Gw.Webservice.REST_TC.Get -->
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="endmethod(org.testng.ITestResult)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="endmethod" is-config="true" duration-ms="222" started-at="2021-01-21T22:08:32Z" finished-at="2021-01-21T22:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=tc1_Get.test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endmethod -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="test" duration-ms="398" started-at="2021-01-21T22:08:33Z" data-provider="inputs" finished-at="2021-01-21T22:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://reqres.in/api]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/users]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[201]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[HTTP/1.1 200 OK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="endmethod(org.testng.ITestResult)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="endmethod" is-config="true" duration-ms="39" started-at="2021-01-21T22:08:33Z" finished-at="2021-01-21T22:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=tc1_Get.test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endmethod -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="test" duration-ms="370" started-at="2021-01-21T22:08:33Z" data-provider="inputs" finished-at="2021-01-21T22:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://reqres.in/api]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/users]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[202]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[HTTP/1.1 200 OK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="endmethod(org.testng.ITestResult)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a]" name="endmethod" is-config="true" duration-ms="57" started-at="2021-01-21T22:08:33Z" finished-at="2021-01-21T22:08:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=tc1_Get.test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Gw.Webservice.REST_TC.tc1_Get@6e0e048a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endmethod -->
+      </class> <!-- Gw.Webservice.REST_TC.tc1_Get -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

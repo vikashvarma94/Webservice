@@ -30,33 +30,36 @@ public class Baseclass {
 	public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYYY-MM-dd HH_mm_ss");
 	public static LocalDateTime now = LocalDateTime.now(); 
 	
-	@BeforeTest(alwaysRun = true)
+	@BeforeSuite(alwaysRun = true)
   	public void suite() {  
 	 ExtentHtmlReporter reporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"//Reports/"+dtf.format(now)+".html");
 	    report = new ExtentReports(); 
 	    report.attachReporter(reporter);
 	    }
-  
-  @AfterMethod(alwaysRun =true)
-  public void endtest(ITestResult result) throws IOException{
-	  TakesScreenshot ts  = (TakesScreenshot)driver;
-	  File src = ts.getScreenshotAs(OutputType.FILE);
-	  String path=System.getProperty("user.dir")+"//Screnshots/"+dtf.format(now)+".png";
-	  File destination = new File(path);
-	  FileUtils.copyFile(src, destination );
-	  
-	  if (result.getStatus() == ITestResult.FAILURE){
-		  test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());	  
-	  }
-	  else {
-		  test.pass("pass",MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-	  }
+	
+	@AfterMethod(alwaysRun = true)
+	public void endmethod(ITestResult result) throws IOException{
+		 if (result.getStatus() == ITestResult.FAILURE){
+			  test.fail(result.getThrowable().getMessage());	  
+		  }
 	  report.flush();
-  }
-
-
-
-
-
+	  }
+	}
   
-}
+ // @AfterMethod(alwaysRun =true)
+//  public void endtest(ITestResult result) throws IOException{
+//	  TakesScreenshot ts  = (TakesScreenshot)driver;
+//	  File src = ts.getScreenshotAs(OutputType.FILE);
+//	  String path=System.getProperty("user.dir")+"//Screnshots/"+dtf.format(now)+".png";
+//	  File destination = new File(path);
+//	  FileUtils.copyFile(src, destination );
+//	  
+//	  if (result.getStatus() == ITestResult.FAILURE){
+//		  test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());	  
+//	  }
+//	  else {
+//		  test.pass("pass",MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+//	  }
+//  report.flush();
+//  }
+
